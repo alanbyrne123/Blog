@@ -4,7 +4,7 @@ function emailForm() {
 		e.preventDefault();
 		const subject = encodeURIComponent(document.getElementById("subject").value);
 		const body = encodeURIComponent(document.getElementById("body").value);
-		const mailtoLink = `mailto:alan.kavanagh@version1.com?subject=${subject}&body=${body}`;
+		const mailtoLink = `mailto:alan.k@.com?subject=${subject}&body=${body}`;
 		window.location.href = mailtoLink;
 	})
 };
