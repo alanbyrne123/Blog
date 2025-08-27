@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AK Blog - Blog</title>
+	<link rel="stylesheet" href="../src/styles/stylesheet.css">
+	<script src="../src/scripts/blog.js"></script>
+	<script src="../src/scripts/customization.js"></script>
+</head>
+
+<body>
+
+	<!-- Nav links -->
+	<div>
+		<nav>
+			<div class="nav-links">
+				<a class="active" href="index.html">Blog</a>
+				<a href="about_me.html">About</a>
+				<a href="contact.html">Contact me</a>
+			</div>
+			<button id="darkModeToggle" class="dark-mode-btn">🌙</button>
+			<button id="fontSizeToggle" class="font-size-btn">A+</button>
+		</nav>
+	</div>
+
+	<div>
+		<h1>Welcome to my blog</h1>
+		<h2>I'm Alan Kavanagh</h2>
+	</div>
+
+	<!-- New Blog Post Button -->
+	<div class="blog-controls">
+		<button id="newPostBtn">Create New Blog Post</button>
+	</div>
+
+	<!-- New Blog Post Form -->
+	<div id="postForm" class="form-container" style="display: none;">
+		<h2>Create New Blog Post</h2>
+		<form id="blogPostForm">
+			<label for="postTitle">Title:</label>
+			<input type="text" id="postTitle" required>
+
+			<label for="postContent">Content:</label>
+			<textarea id="postContent" required></textarea>
+
+			<button type="submit" id="submitPost">Submit Post</button>
+		</form>
+	</div>
+
+	<!-- Blog Posts Loading -->
+	<div id="blogPosts" class="blog-posts">
+	</div>
+
+</body>
+
+</html>

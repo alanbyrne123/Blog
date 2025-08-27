@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AK Blog - About</title>
+	<link rel="stylesheet" href="../src/styles/stylesheet.css">
+	<script src="../src/scripts/customization.js"></script>
+</head>
+
+<body>
+	<!-- Nav links -->
+	<div>
+		<nav>
+			<div class="nav-links">
+				<a href="index.html">Blog</a>
+				<a class="active" href="about_me.html">About</a>
+				<a href="contact.html">Contact me</a>
+			</div>
+			<button id="darkModeToggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
+			<button id="fontSizeToggle" class="font-size-btn" aria-label="Increase font size">A+</button>
+		</nav>
+	</div>
+
+	<div>
+		<h3>Hello, I'm Alan</h3>
+		<p>I built this small site with accessibility and simplicity in mind.</p>
+		<p>This blog is a personal project to share my thoughts on modern tech and practice my web dev skills.</p>
+		<br><br>
+	</div>
+
+	<div>
+		<h3>What I learned so far</h3>
+		<ul>
+			<li>How to store and retrieve posts with localStorage and keep the newest posts on top.</li>
+			<li>how to create a responsive navigation, some hover interactions, and a persistent dark mode.</li>
+			<li>How to create a simple email form that uses the user's email client.</li>
+			<li>How to use JavaScript to create a modal image viewer and blog post forum.</li>
+		</ul>
+		<br><br>
+	</div>
+
+	<div>
+		<h3>Features</h3>
+		<ul>
+			<li>Create and delete persistent blogs.</li>
+			<li>Interactive hover UI navbar and a user friendly webpage.</li>
+			<li>A persistent dark mode with font size changing.</li>
+		</ul>
+		<br><br>
+	</div>
+
+	<!-- Modal Image -->
+	<div>
+		<h3>Clickable image of my son reginald:</h3>
+		<img id="myImg" src="../src/assets/Cat.jpg" alt="A picture of a cat" width="400" height="200">
+		<div id="myModal" class="modal">
+			<span class="close">&times;</span>
+			<img class="modal-content" id="img01">
+			<div id="caption"></div>
+		</div>
+	</div>
+
+	<script src="../src/scripts/modal_images.js"></script>
+</body>
+
+</html>

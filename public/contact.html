@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AK Blog - Contact</title>
+	<link rel="stylesheet" href="../src/styles/stylesheet.css">
+	<script src="../src/scripts/customization.js"></script>
+	<script src="../src/scripts/email.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Nav links -->
+	<div>
+		<nav>
+			<div class="nav-links">
+				<a href="index.html">Blog</a>
+				<a href="about_me.html">About</a>
+				<a class="active" href="contact.html">Contact me</a>
+			</div>
+			<button id="darkModeToggle" class="dark-mode-btn">🌙</button>
+			<button id="fontSizeToggle" class="font-size-btn">A+</button>
+		</nav>
+	</div>
+
+	<!-- Email Submission -->
+	<div class="form-container">
+		<h2>Send me an Email</h2>
+		<form id="emailForm">
+			<input type="text" id="subject" placeholder="Subject" required />
+			<textarea id="body" placeholder="Email body" required></textarea>
+			<button type="submit" onclick="emailForm()">Send Email</button>
+		</form>
+	</div>
+</body>
+
+</html>

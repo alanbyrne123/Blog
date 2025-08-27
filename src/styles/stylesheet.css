@@ -1,0 +1,390 @@
+/* Reset default template */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+	font-family: 'Segoe UI', sans-serif;
+	background-color: #f9f9f9;
+	line-height: 1.6;
+	padding: 20px;
+}
+
+/*        */
+/* Navbar */
+/*        */
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end; /* right aligns non links */
+	/* keep links centered while toggle sits right */
+	gap: 18px;
+	background: linear-gradient(90deg, #0b63a2 0%, #0f172a 100%);
+	padding: 12px 24px;
+	border-radius: 12px;
+	box-shadow: 0 8px 20px rgba(11, 99, 162, 0.18);
+	backdrop-filter: blur(6px);
+	margin-bottom: 30px;
+}
+
+/* center the link group while allowing the toggle button to sit at the far right */
+.nav-links {
+	display: flex;
+	gap: 18px;
+	margin: 0;
+	align-items: center;
+	flex-wrap: wrap;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+nav a {
+	color: #ffffff;
+	text-decoration: none;
+	padding: 10px 16px;
+	border-radius: 8px;
+	font-weight: 600;
+	letter-spacing: 0.2px;
+	position: relative;
+}
+
+/* underline that animates on hover */
+nav a::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -6px;
+	width: 0;
+	height: 3px;
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 2px;
+	transition: width 150ms ease;
+}
+
+/* hover effects */
+nav a:hover,
+nav a:focus {
+	background: rgba(255, 255, 255, 0.06);
+	transform: translateY(-3px);
+	box-shadow: 0 8px 18px rgba(2, 6, 23, 0.18);
+	outline: none;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+	width: 56%;
+}
+
+/* dark-mode button */
+.dark-mode-btn {
+	background: rgba(255, 255, 255, 0.06);
+	color: #fff;
+	border: 0;
+	padding: 8px 12px;
+	border-radius: 8px;
+	cursor: pointer;
+	z-index: 2;
+	position: relative;
+}
+
+.dark-mode-btn:hover {
+	transform: translateY(-2px);
+	background: rgba(255, 255, 255, 0.10);
+}
+
+/* mark the active link */
+nav a.active {
+	background: rgba(255, 255, 255, 0.10);
+	box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* Dark mode overrides */
+body.dark {
+	background-color: #071225;
+	color: #e6eef8;
+}
+
+body.dark nav {
+	background: linear-gradient(90deg, #07243a 0%, #071225 100%);
+	box-shadow: 0 8px 20px rgba(2, 6, 23, 0.6);
+}
+
+body.dark .form-container,
+body.dark .blog-post {
+	background-color: #0b1620;
+	color: #e6eef8;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+	border-color: rgba(255, 255, 255, 0.03);
+}
+
+body.dark nav a {
+	color: #dbefff;
+}
+
+/*                      */
+/* Font size selections */
+/*                      */
+.font-size-btn {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    border: 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.font-size-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.10);
+}
+
+/* Dark mode keeps it consistent */
+body.dark .font-size-btn {
+    color: #dbefff;
+}
+
+body.font-small {
+    font-size: 12px;
+}
+
+body.font-medium {
+    font-size: 16px;
+}
+
+body.font-large {
+    font-size: 24px;
+}
+
+/* Headers */
+h1,
+h2 {
+	text-align: center;
+}
+
+/*                                                        */
+/* Form container, used both for blog submission and email*/
+/*                                                        */
+.form-container {
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+form label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+	width: 100%;
+	padding: 12px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	font-size: 16px;
+}
+
+form textarea {
+	height: 150px;
+	resize: vertical;
+}
+
+form button {
+	background-color: #0077cc;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 6px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+form button:hover {
+	background-color: #005fa3;
+}
+
+/*                   */
+/* Blog post styling */
+/*                   */
+.blog-controls {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.blog-posts {
+	max-width: 800px;
+	margin: 30px auto;
+}
+
+.blog-post {
+	background: white;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h3 {
+	color: #0077cc;
+	margin-bottom: 10px;
+}
+
+.blog-post .date {
+	color: #666;
+	font-size: 0.9rem;
+	margin-bottom: 10px;
+}
+
+#newPostBtn {
+	background-color: #0077cc;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 6px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+#newPostBtn:hover {
+	background-color: #005fa3;
+}
+
+.post-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.delete-btn {
+	background-color: #ff4444;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.delete-btn:hover {
+	background-color: #cc0000;
+}
+
+
+
+/*                     */
+/* Image modal styling */
+/*                     */
+#myImg {
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#myImg:hover {
+	opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 100px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.9);
+	/* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+	height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+	from {
+		transform: scale(0.1)
+	}
+
+	to {
+		transform: scale(1)
+	}
+}
+
+/* The Close Button */
+.close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+	.modal-content {
+		width: 100%;
+	}
+}
